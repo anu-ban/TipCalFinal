@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tipCal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_CalculateTotal"
+        android:layout_width="171dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="148dp"
+        android:clickable="true"
+        android:onClick="btn_CalculateTotal"
+        android:text="@string/calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_TotalBill"
+        app:layout_constraintVertical_bias="0.876" />
+
+
+    <EditText
+        android:id="@+id/edtTXT_EnterPercent"
+        android:layout_width="230dp"
+        android:layout_height="43dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/_9_10_15"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/lable_tipPercent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.928"
+        app:layout_constraintStart_toEndOf="@+id/lable_tipPercent"
+        app:layout_constraintTop_toTopOf="@+id/lable_tipPercent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editText_EnterBill"
+        android:layout_width="230dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="64dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/enter_total_bill_amount"
+        android:inputType="number"
+        android:labelFor="@id/Lable_bill"
+        app:layout_constraintBottom_toBottomOf="@+id/Lable_bill"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.928"
+        app:layout_constraintStart_toEndOf="@+id/Lable_bill"
+        app:layout_constraintTop_toTopOf="@+id/Lable_bill"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/lable_Total"
+        android:layout_width="145dp"
+        android:layout_height="41dp"
+        android:background="#C7C7BE"
+        android:text="@string/bill_total"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lable_TipTotal"
+        app:layout_constraintVertical_bias="0.097" />
+
+    <TextView
+        android:id="@+id/lable_TipTotal"
+        android:layout_width="142dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="168dp"
+        android:background="#C7C7BE"
+        android:text="@string/tip_total"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lable_tipPercent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/Lable_bill"
+        android:layout_width="145dp"
+        android:layout_height="41dp"
+        android:background="#C7C7BE"
+        android:text="@string/bill"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/lable_tipPercent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.64" />
+
+    <TextView
+        android:id="@+id/lable_tipPercent"
+        android:layout_width="145dp"
+        android:layout_height="41dp"
+        android:background="#C7C7BE"
+        android:text="@string/tip"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.204" />
+
+    <TextView
+        android:id="@+id/textView_TipTotal"
+        android:layout_width="252dp"
+        android:layout_height="42dp"
+        android:background="#8BC34A"
+        app:layout_constraintBottom_toBottomOf="@+id/lable_TipTotal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/lable_TipTotal"
+        app:layout_constraintTop_toTopOf="@+id/lable_TipTotal" />
+
+    <TextView
+        android:id="@+id/textView_TotalBill"
+        android:layout_width="252dp"
+        android:layout_height="42dp"
+        android:background="#8BC34A"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="@id/lable_Total"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/lable_Total"
+        app:layout_constraintTop_toTopOf="@+id/lable_Total"
+        app:layout_constraintVertical_bias="0.9" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
